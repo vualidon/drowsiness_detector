@@ -30,8 +30,8 @@ face_mesh2 = mp_face_mesh2.FaceMesh(min_detection_confidence=0.5, min_tracking_c
 mp_hand = mp.solutions.hands
 hands = mp_hand.Hands(
 model_complexity=0,
-min_detection_confidence=0.5,
-min_tracking_confidence=0.5
+min_detection_confidence=0.7,
+min_tracking_confidence=0.7
 )
 
 
@@ -89,7 +89,7 @@ def gen_frames(image,frame_count,frame_count_2,_continue):
             count += 1
         if myHand[20][1] < myHand[17][1]:
             count += 1
-        if count == 1:
+        if count == 1 or count == 0:
             cv.putText(image, "PAUSE", (50, 450), cv.FONT_HERSHEY_SIMPLEX, 3, (255, 0, 0), 10)
             _continue = False
         elif count == 5:
