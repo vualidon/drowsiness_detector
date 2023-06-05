@@ -1,0 +1,10 @@
+streamlit
+streamlit_webrtc
+opencv-python-headless
+av
+mediapipe
+numpy
+scipy
+playsound
+asyncio
+pydub
