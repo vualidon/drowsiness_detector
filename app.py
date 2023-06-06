@@ -152,12 +152,12 @@ def gen_frames(image,frame_count,frame_count_2,_continue):
                 nose_3d_projection, jacobian = cv.projectPoints(nose_3d, rot_vec, trans_vec, cam_matrix, dist_matrix)
 
                 p1 = (int(nose_2d[0]), int(nose_2d[1]))
-                p2 = (int(nose_2d[0] + y * 10) , int(nose_2d[1] - x * 10))
+                p2 = (int(nose_3d_projection[0][0][0]) , int(nose_3d_projection[0][0][1]))
 
                 cv.line(image, p1, p2, (255, 0, 0), 3)
                 cv.putText(
                     image,
-                    f"x: {str(np.round(x, 2))}",
+                    f"x: {str(np.round(x, 2))} y:{str(np.round(y, 2))} z: {str(np.round(z, 2))}",
                     (500, 50),
                     cv.FONT_HERSHEY_SIMPLEX,
                     1,
