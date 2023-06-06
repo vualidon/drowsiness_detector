@@ -157,8 +157,8 @@ def gen_frames(image,frame_count,frame_count_2,_continue):
                 cv.line(image, p1, p2, (255, 0, 0), 3)
                 cv.putText(
                     image,
-                    f"x: {str(np.round(x, 2))} y:{str(np.round(y, 2))} z: {str(np.round(z, 2))}",
-                    (0, 0),
+                    f"x: {str(np.round(x, 2))}",
+                    (500, 20),
                     cv.FONT_HERSHEY_SIMPLEX,
                     1,
                     (0, 0, 255),
