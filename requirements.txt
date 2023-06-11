@@ -5,6 +5,5 @@ av
 mediapipe
 numpy
 scipy
-playsound
 asyncio
 pydub
