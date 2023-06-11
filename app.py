@@ -158,7 +158,7 @@ def gen_frames(image,frame_count,frame_count_2,_continue):
                 cv.putText(
                     image,
                     f"x: {str(np.round(x, 2))}",
-                    (500, 20),
+                    (10, 20),
                     cv.FONT_HERSHEY_SIMPLEX,
                     1,
                     (0, 0, 255),
@@ -197,8 +197,8 @@ def gen_frames(image,frame_count,frame_count_2,_continue):
                 ratio = (ratio_left + ratio_right) / 2.0
                 image = cv.putText(
                     image,
-                    f"EAR = {str(ratio)}",
-                    (100, 100),
+                    f"EAR = {str(np.round(ratio, 2))}",
+                    (10, 100),
                     cv.FONT_HERSHEY_SIMPLEX,
                     1,
                     COLOR_RED,
@@ -256,11 +256,20 @@ def audio_frame_callback(frame: av.AudioFrame):
 #     }
 # )
 
+# webrtc_streamer(
+#     key="example",
+#     video_frame_callback=callback,
+#     audio_frame_callback=audio_frame_callback,
+#     rtc_configuration={  # Add this line
+#         "iceServers": [{"urls": ["turn:relay4.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82","credential": "XVm8IFOVfcTTejFP"}]
+#     }
+# )
+
 webrtc_streamer(
     key="example",
     video_frame_callback=callback,
     audio_frame_callback=audio_frame_callback,
     rtc_configuration={  # Add this line
-        "iceServers": [{"urls": ["turn:relay4.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82","credential": "XVm8IFOVfcTTejFP"}]
+        "iceServers": [{"urls": ["turn:relay3.expressturn.com:80"],"Username":"efEH1S1SLKBBPJGW82", "Password":"XVm8IFOVfcTTejFP", "Secret Key":"6ou0f5d86sq0yiqwguc8"}]
     }
 )
