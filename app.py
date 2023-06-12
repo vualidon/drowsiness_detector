@@ -256,14 +256,36 @@ def audio_frame_callback(frame: av.AudioFrame):
 #     }
 # )
 
-# webrtc_streamer(
-#     key="example",
-#     video_frame_callback=callback,
-#     audio_frame_callback=audio_frame_callback,
-#     rtc_configuration={  # Add this line
-#         "iceServers": [{"urls": ["turn:relay4.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82","credential": "XVm8IFOVfcTTejFP"}]
-#     }
-# )
+webrtc_streamer(
+    key="example",
+    video_frame_callback=callback,
+    audio_frame_callback=audio_frame_callback,
+    rtc_configuration={  # Add this line
+        "iceServers": [{
+        urls: "stun:a.relay.metered.ca:80",
+      },
+      {
+        urls: "turn:a.relay.metered.ca:80",
+        username: "babd0ab1967e99652189dfe2",
+        credential: "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        urls: "turn:a.relay.metered.ca:80?transport=tcp",
+        username: "babd0ab1967e99652189dfe2",
+        credential: "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        urls: "turn:a.relay.metered.ca:443",
+        username: "babd0ab1967e99652189dfe2",
+        credential: "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        urls: "turn:a.relay.metered.ca:443?transport=tcp",
+        username: "babd0ab1967e99652189dfe2",
+        credential: "/7yAkWzEKRMRj9Xc",
+      }]
+    }
+)
 
 webrtc_streamer(
     key="example",
