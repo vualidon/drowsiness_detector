@@ -252,7 +252,7 @@ webrtc_streamer(
     video_frame_callback=callback,
     audio_frame_callback=audio_frame_callback,
     rtc_configuration={  # Add this line
-        "iceServers": [{"urls": ["turn:turn.l.google.com:3478"]}]
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
     }
 )
 
