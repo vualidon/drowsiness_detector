@@ -256,49 +256,49 @@ def audio_frame_callback(frame: av.AudioFrame):
 #     }
 # )
 
-# webrtc_streamer(
-#     key="example",
-#     video_frame_callback=callback,
-#     audio_frame_callback=audio_frame_callback,
-#     rtc_configuration={  # Add this line
-#         "iceServers": [{
-#         "urls": "stun:a.relay.metered.ca:80",
-#       },
-#       {
-#         "urls": "turn:a.relay.metered.ca:80",
-#         "username": "babd0ab1967e99652189dfe2",
-#         "credential": "/7yAkWzEKRMRj9Xc",
-#       },
-#       {
-#         "urls": "turn:a.relay.metered.ca:80?transport=tcp",
-#         "username": "babd0ab1967e99652189dfe2",
-#         "credential": "/7yAkWzEKRMRj9Xc",
-#       },
-#       {
-#         "urls": "turn:a.relay.metered.ca:443",
-#         "username": "babd0ab1967e99652189dfe2",
-#         "credential": "/7yAkWzEKRMRj9Xc",
-#       },
-#       {
-#         "urls": "turn:a.relay.metered.ca:443?transport=tcp",
-#         "username": "babd0ab1967e99652189dfe2",
-#         "credential": "/7yAkWzEKRMRj9Xc",
-#       }]
-#     }
-# )
-
 webrtc_streamer(
     key="example",
     video_frame_callback=callback,
     audio_frame_callback=audio_frame_callback,
     rtc_configuration={  # Add this line
-        "iceServers": [{"urls": ["turn:relay2.expressturn.com:443"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"}, 
-                      {"urls": ["turn:relay3.expressturn.com:80"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay3.expressturn.com:443"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay4.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay5.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay6.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay7.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
-                      {"urls": ["turn:relay8.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"}]
+        "iceServers": [{
+        "urls": "stun:a.relay.metered.ca:80",
+      },
+      {
+        "urls": "turn:a.relay.metered.ca:80",
+        "username": "babd0ab1967e99652189dfe2",
+        "credential": "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        "urls": "turn:a.relay.metered.ca:80?transport=tcp",
+        "username": "babd0ab1967e99652189dfe2",
+        "credential": "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        "urls": "turn:a.relay.metered.ca:443",
+        "username": "babd0ab1967e99652189dfe2",
+        "credential": "/7yAkWzEKRMRj9Xc",
+      },
+      {
+        "urls": "turn:a.relay.metered.ca:443?transport=tcp",
+        "username": "babd0ab1967e99652189dfe2",
+        "credential": "/7yAkWzEKRMRj9Xc",
+      }]
     }
 )
+
+# webrtc_streamer(
+#     key="example",
+#     video_frame_callback=callback,
+#     audio_frame_callback=audio_frame_callback,
+#     rtc_configuration={  # Add this line
+#         "iceServers": [{"urls": ["turn:relay2.expressturn.com:443"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"}, 
+#                       {"urls": ["turn:relay3.expressturn.com:80"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay3.expressturn.com:443"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay4.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay5.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay6.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay7.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"},
+#                       {"urls": ["turn:relay8.expressturn.com:3478"],"username":"efEH1S1SLKBBPJGW82", "credential":"XVm8IFOVfcTTejFP"}]
+#     }
+# )
